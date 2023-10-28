@@ -38,5 +38,3 @@ def OCR(input_folder):
             outfile.write("\n")
     with open("marked_text.txt", "r", encoding="utf-8") as infile:
         return infile.read()
-
-
