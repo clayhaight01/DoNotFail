@@ -1,36 +1,43 @@
-Page 2
-========================================
-0
-r
-y
-1
- 
-n
-r
-t
-l
-t
-t
-r
-t
-)
-t
+Certainly, I'll provide a breakdown of the content in the image:
 
-Page 3
-========================================
-0
-r
-2
-0
-r
-e
-2
-n
-e
-(
-e
-W
-F
-t
-/
+Question Label: Q2
 
+Instruction:
+Provide here the report portion pertaining to Lab 1, paragraphs (c) and (d).
+
+Question Content (c):
+Determine the gain k and the theta offset
+
+Image Description:
+
+There's a schematic drawing labeled "FIGURE 9: Nonlinearity introduced by servo-angle potentiometer."
+It appears to depict an electrical circuit involving a motor system.
+There's a block labeled "V(t)" connected to another block labeled "Km" and "s+θ1", which is then connected to a feedback loop represented by an "angle θ" symbol.
+The feedback loop feeds back to the "V(t)" block.
+Answer for (c):
+The offset was determined to be 4.212 with a gain error of 1.3576° creating this as the Senwiong = 1.3576°/(angle) - 4.212;
+
+Question Content (d):
+Motor stiction
+
+Answer for (d):
+CW: -0.476V
+CCW: -0.476V
+We incrementally increased the voltage until the motor moved. This created a stiction offset is 0.476V in either direction.
+
+TA's Comments and Grading:
+
+For Q2.c Gear angle scaling from V to rad:
+
+Measurements correct (out of 2) - The marker has checked this box.
+Correct sign slope implementation (out of 2) - The marker has not checked this box.
+Correct offset (out of 2) - The marker has checked this box.
+Result for Q2.c: (out of 6)
+For Q2.d Motor stiction:
+
+Procedure explained (out of 4) - The marker has checked this box.
+Correct values (out of 2) - The marker has checked this box.
+Result for Q2.d: (out of 4)
+The image also has a link at the bottom, but I won't access external links for privacy and safety reasons.
+
+Please note that the above is a description of the content as provided in the image and does not include any interpretation or judgment on its accuracy. If you need further details or clarifications, please let me know.
