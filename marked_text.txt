@@ -1,0 +1,408 @@
+Page 2
+========================================
+10/28/23, 12.46 PM
+Crowdmark
+My grades for F2023.ECE484 Lab 1 Report
+Q1
+0 / 0
+Include the signed Declaration of Authorship found on the Lab Manual. An
+actual signature must be included;
+typed name is not an acceptable signature
+substitute
+Graded by Ilyas Farhat
+(ilyas farhat@uwaterloo.ca)
+We acknowledge and promise that:
+   included
+We are the sole authors of this lab report and associated sim    in the report (-1)
+tilesfcode:
+2. Statement of
+originality/Authorship
+This work represents our original work
+Declaration
+We have not shared detailed analysis or detailed design re:
+(-2)
+computer code, or Simulink diagrams with any other stude
+3. Code of the formula
+We have not obtained or looked at lab reports from any otl
+node not included in
+current or former student of ECE 481/484,and we have nc
+
+the report (-1)
+other student access any
+of our lab work
+4. Missing references
+We have completely and unambiguously acknowledgedan
+(-2)
+referenced all persons and aids used to help us with our W(
+Student
+Name:
+Clayton Haight
+Student
+Signature
+UoytaHaight
+Student 2 Name: Ethan Childerhose
+Student 2 Signature :
+Group #:
+97
+Station #:
+@)We_requite anactualsiqhanute: aapednameisnot anacceptable subsrinute
+https Ilapp.crowdmark com/scoreld3609801-613e-44bf-a804-5ae93ff120ae?print-true
+1/7
+missing
+part
+
+Page 3
+========================================
+10/28/23, 12.46 PM
+Crowdmark
+Q2
+10
+Provide here the report portion pertaining to Lab 1, paragraphs (c) and (d).
+Determine the gain K and the theta offset
+Q2.c Gear angle
+scaling from V to
+rad
+V(
+0(th
+angV
+1, measure -
+4(o+I)
+[Eutli cthkr
+ments cor-
+AWc Mm
+Cnle u/arr
+1
+rect (out of
+
+
+FIGURE
+Nonlinearity introduced by servo-angle potentiome
+correct
+slope sign
+The offset was determined t0 be
+212 with
+gain error of 1.3576 creating this as th
+implemen-
+ServoAng
+3576*(angv
+4.2121;
+tation (out
+Determine stiction:
+02.d Motor stiction
+of 2)
+CW: 0.476v
+correct off -
+procedure explained (OL
+CCW: -0.476v
+set (out of
+correct values (out of 2)
+We incrementally increased thevoltage until "
+
+offset is
+476V
+either direction:
+(out of 4)
+(out of 6)
+https Ilapp.crowdmark com/scoreld3609801-613e-44bf-a804-5ae93ff120ae?print-true
+2/7
+
+
+Page 4
+========================================
+10/28/23, 12.46 PM
+Crowdmark
+Q3
+23
+Provide here the report portion pertaining to Lab
+paragraphs (e) and (f).
+The motor mode
+as follows:
+s(ts + 1)
+We increased thi
+what C?
+get an overshoot while keeping motor voltage under 6V, which is its
+max The response peaks aru.1375 after the step and overshoots by 7.5%6.
+The transfer function ofthe svstem would then be:
+400K,
+1006,
+100L
+IS2
+IS
+1OOK,
+T52 + $
+10OKI
+1+J00K
+1OK tIS? +
+Ts2 + $ I00K;
+Ts? + $
++ 5 + 1O0K;
+1006,
+Ts2
++5
+100K, 2. Wn
+1.Tp
+Quos
+100
+03.e Motor
+2t(
+modeling
+0.63615
+29.72
+0.0264
+0.2335
+explana-
+tion of
+Plugging in 7.59a for %OS allows us to solve damping ratio as
+6362
+damping into
+with Tp which is 1.37s gives
+natura
+frequency of 29.72
+how cl
+This then allows uUs t0 solve tau which is 0.0264 rad/(Vs)
+stabilized
+(out of 2)
+For lab 2, you may use the average of your
+Cannot give any point
+
+sampling
+station:
+work as you don't Snoi
+
+rate stated
+discussion of what you
+Station
+(out of 1)
+answers;
+sample
+K1 =-2.0513 rad/(Vs)
+check the comment in
+You have an idea ab
+calcula -
+tau
+0.0203
+der systems but not  tions in-
+system here:
+cluded
+(out of 3)
+valid
+choices of
+test pa-
+rameters
+(out of 3)
+results for
+K1 and tau
+correct
+(out of 3)
+experi-
+mental
+plots
+cluding
+motor
+
+voltage to
+show it
+did not
+saturate
+(out of 2)
+several
+sets of
+measure-
+ments
+with dif=
+ferent pa-
+rameters
+taken (out
+of 2)
+explana-
+tions and
+https:Ilapp.crowdmark com/score/d3609801-613e-44bf-a804-5ae93ff120ae?print-true
+3/7
+T52 -
+Piug
+
+Page 5
+========================================
+10/28/23, 12.46 PM
+Crowdmark
+discussion
+Simulated Step Response
+of method
+used (out
+of 3)
+gave you 2 marks for the Simulink
+NC
+ALLi 
+no plots Or
+supporting your
+claim;
+Time (s)
+https Ilapp.crowdmark com/scoreld3609801-613e-44bf-a804-5ae93ff120ae?print-true
+4/7
+figures
+
+Page 6
+========================================
+10/28/23, 12.46 PM
+Crowdmark
+Q4
+9.5
+17
+Provide here the report portion pertaining to Lab
+paragraphs (g) and (h):
+Provide here; at the end of this Question, any References you used for the
+preparation of this report:
+g) This is the equivalent block diagram of the system with the saturation and sensor calibration;
+blocks names
+analog
+and
+Wlme
+digital?
+Missing stiction compensation
+04.g & h
+Missing Gear angle scaling (rad to V)
+Block diagram
+of inner loop
+1.all blocks
+present;
+nonlinear
+effects
+included
+(out of 7)
+2. shows
+variable
+names
+used in
+the for-
+mula
+node and
+their
+units;
+signs
+consis-
+tent with
+those
+used in
+the i0r =
+mula
+node
+(out of 1)
+3. appara-
+tuS com-
+ponents
+identified
+(out of 2)
+analog
+and digi-
+tal sig-
+nals
+identified
+(out of 2)
+(out of 12)
+https:Ilapp.crowdmark com/score/d3609801-613e-44bf-a804-5ae93ff120ae?print-true
+5/7
+
+Page 7
+========================================
+10/28/23, 12.46 PM
+Crowdmark
+USER INTERFACE TEMPLATE
+Insert
+below the code for vour scaling saturation block, and controllers "
+varlables may be declared on tne box border,
+shown for the Input
+"Tms
+and the output
+BallPosn
+variables can also be declared inline .
+was done for "Templ
+float Temol;
+float eGearAng;
+Shift registers permit previous values af variables to be saved,
+The output vanable
+wired
+shift register Input on the For Loop border-
+The inputs
+and
+22"are wired
+the corresponding shitt register outputs;
+holds the value of "e
+from the previous iteration and
+e2" holds the value of "el" from the
+previous iteration;
+Place Your sensor SCALING here
+NO scaling
+provided tor the demo
+BallPosn
+ServoAng -
+3576
+angv _
+4,2121; _
+Vto V*/
+SCALING end
+if (Loop < 31 /* all shift registers cleared after 3rd iteration; this statement initializes the shift registers
+ThRef
+pOsVz angv =ServoAng= BallPosnz 0;]
+else
+(Manuall
+{"manual
+moton
+voltage control" /
+Motv;}
+else
+control
+Igorithm" /
+CAUTION: DO NOT load the output of a nonlinear block (e €
+saturator, offset) into =
+SHIFT REGISTER;
+to avaid introducing
+nonlinearity into yaur controller loap. Create separate variables
+hold nonlinear
+values
+Place your outer
+BALL POSITION CONTROLLER below
+BallPosn
+0; // REMOVE this Iine when the ball is =
+used on the beam
+Place Your
+gear angle SATURATOR below
+if (ref > 0.71
+no; you don't
+change the output speci -
+(ref = 0.7;}
+@ise
+(ref < 0.71
+fied from the ref: generator; You gener-
+(ref=
+~0.7;}
+ate another
+signal, call it Theta_sat Or
+Jnner
+something
+and that can be saturated
+Place Youf
+loop GEAR
+100*(ref - ServoAng);
+You don't change your input signal val-
+ues as this might result in 'inconsisten -
+cies" in real-life when working on
+project with other engineers.
+0.5
+ThRet, ThRefl;
+el are
+However; they will be necessary (at a minimum)
+the controllers willl be implemented:
+References provided by email
+https Ilapp.crowdmark com/scoreld3609801-613e-44bf-a804-5ae93ff120ae?print-true
+posv ;
+being
+Dres
+nen
+
+Page 8
+========================================
+10/28/23, 12.46 PM
+Crowdmark
+https Ilapp.crowdmark com/scoreld3609801-613e-44bf-a804-5ae93ff120ae?print-true
+7/7
+

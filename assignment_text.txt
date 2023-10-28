@@ -1,0 +1,461 @@
+Page 1
+========================================
+WATERLOO
+LB
+MODELING QE LHEMOLOR SLSEM
+This lah manual
+wrillen such us
+allow
+retr-
+Sldlenfe
+Erercise {hefr engineerig
+judgemenl und
+creult
+Design objectives Mst he miet; but how VOu complete
+VurIois [MA: cun
+WTI
+Ulin
+finoler
+Hmts
+olliered
+T
+Wola
+Wiseud
+of" step-br-step
+[rtrUConA
+Tlas approach
+Wlenaet
+WUVId
+challengig engmeering
+Coralio
+For Lab
+Veacus
+thee itiner-loop
+Figure
+where the motOr gear angle
+cnnoed
+The
+loop
+duplicated
+Figure 7(a): Figure 7(b) shows the later addition of
+iter
+Iittit the
+[IOLOI OpeTaling angle range needed when €Onnecting lhe beain;
+Figure Z(e) shows
+disetelized
+controller acting 0n the continuous plant:
+Vu)
+0()
+C (s)
+O(t)
+CH($)
+s(2 +I)
+8 , [K]
+D[-
+O(t)
+4cti
+FIGURE
+cunuoue-MGinner
+canmnuous-uue inneI
+with
+Gann
+satpled-data inner loop with
+kng
+(the dashed aITO-
+represent diserete-tinle signals; the
+S; black represents
+ideal satpler. and the H;block rep
+CseIS
+Jucalzeru
+order hold)
+Warniug: Make sure that the beam
+not attached
+the gear at this point: You uced
+working controller for the inner-loop to avoid dataging the
+(surprisingly expensive) ball
+bcam apparatus?
+OI J
+Fall 2023
+loc
+Loop
+
+Page 2
+========================================
+WATERLOO
+(a) Familiarize yourself with the GWiz application:
+Open GWiz
+2Ivproj: from this project
+epOren ODCI
+cRIO-9076_RTvi
+strongly suggested that BOTH parlnets compile the
+tiles On their account; and keep
+copy
+ongoing project work
+[ICASMIC
+redundancy.
+availability of files for submissions and demo.
+[fyou still have questions about the variables used in the formnula node, refer
+Appendix 3 in
+this documet
+Check oul
+MT
+experimenta
+caln
+Figure
+chon
+detail of the motor system plant and how
+cortectly
+Tcarum:
+the gear angle
+rad
+The molor drives this
+detennined
+shali
+using this hole on the
+@
+largest gear
+Urad
+The potentiometer Used
+7
+MasT
+the   molor
+Lear
+angle
+#ltached
+this shafi
+FIGURE &
+The MOIOT
+SSiCM
+plant for Lab
+The TOlo
+KaI
+angle
+Meicureu
+LSML
+potentioneler.
+neceatm
+Cunyen
+pulenliuCier
+Volaee
+[0  [ne   conesponding
+gear
+angle in  radians.
+This   relationship
+nonlinear due t0 An ollset; a#s shown in
+Figute =
+You should invett this nonlinearity in sofiware
+(referred
+SCIsOT
+scaling"
+eRIO-9076_RT.i)
+that the overall system
+linear. To
+implement the gear angle sealing. first =
+experimentally detertnine the gain and offset for your
+apparatus- Then: Wtite the necessaty eode in the fortula node of the eRIO-9076_RT.vi file to
+compule the gear angle
+Mdians
+OI J
+Fall 2023
+
+Page 3
+========================================
+WATERLOO
+M
+angV
+S(s+)
+naountr
+Mexr Wam
+Vldlanutlt
+FIGURE
+Nonlinearity
+introducedby setvo
+a
+potentiometer
+moor has SOme JHOUIL
+0f stalic fiiction, olien called "stiction"
+FtOM
+canicu
+New
+sliction
+undesirable since
+cun Iake fine mOTOr mOlions
+vety difliculc
+stralegy
+ueul WME
+SlIcLIOn]
+apprOximnalely ) cuncel
+Experimentally  detenine the
+motor Voltape
+requited
+OYCICOMC
+sliclion:
+The
+following tips Iay help:
+Be Sute that the "ManuaVAuto
+toggle switeh On the cRIO-9076_RT.vi frnt
+Seo
+Tn"
+Suthal Vou cunamuaMa
+adjust the motor
+The molor sliction offset should be selected s0
+ideally. the dead zone
+completely
+eiualed
+Stietion [ay
+De nansymnmelica
+you need
+deletnine the stietion oflsel
+euch direction: clockwise an
+counler-locswise
+The ter direction elockwise
+couf[C[-clockISC
+relen
+the direetion of rotation
+of the large gear: viewed fiOm the ftont
+simple stiction compensator
+ided
+block diagram =
+cRIO-9076_RTi
+In Lab
+repOI explain briefly how VOu detertined suitable stietion ollset values
+Tum
+will be us54Ied that the stiction COI
+#enOU
+implemeuted in
+LuuD
+experimental sctup:
+If you are nOL familiar with DC molor
+[oucl
+consult At undergraduate control textbook
+verify that ( 1)
+standard model.
+Using An experimettal
+method.  detertine the specific values of
+K and
+for your lab
+apparatus- Note the following:
+The plant
+open-loop unstable. and therefore
+diflicult
+model the plant direetly -
+Instead, stabilize the plant (how?  and uSe' systet identification techniques (e.g
+step response
+Overanool
+Iunle
+fics[-
+deduce the
+MuOn
+systetn
+parameters_
+pethaps
+frequency response)
+deleTINIC
+model of the closed-oop
+S-CM_
+Then Use these results
+compute
+and
+Pay special attention
+sigts.
+com
+Vallue'5 Iua'
+negalive
+OI J
+Fall 2023
+Ay
+Foi
+Piuel
+voltage.
+peal
+
+Page 4
+========================================
+WATERLOO
+Be sure
+Set the
+sampling rate appropriately
+If you do not explieitly aCcunt for the
+tinite sampling rate in YOur modeling calculations
+then set te
+sampling
+sufliciently fast ( LOOOHz) when obtaining data. In your Teprt, indicate what sampling
+Tale you used alId Wny
+With
+stable inner-loop
+oppOfunily
+Verily thal the stic[ion
+Ville
+selecled
+adequate: the stiction ollset should be high enough s0 that the step
+response first peak
+well rounded with no flat
+ptions, but low enough that the step
+response setles
+its steudy-state Value with no Kear oscillations . Anothet check is thal
+thete should be little or nO steady-stale @TTOr:
+addition
+the ew and ecw Stietion Ollsets. the Labview' application has
+Io other
+prameleTs that affect the behavior of the miotor- When exercising the inner loop you
+May' obsen
+oscillations
+On [n1ee [OLOI
+geat, @S
+approaches the steady state afier the
+initial overshoot The oscillations can be rexluced by changing the values of the
+upper
+limit" and "lower litit" parateters. which have initial default values of
+These
+pirumielen
+cbe cen
+the stippel of the Block Diagat below:
+Monttnchon
+QWeeua
+05
+@uRaf
+Fuichon
+Be sure that you
+donolilmle
+Wa
+applying ttore than - 6V
+Include
+YMI TCDIL
+plot of the motor
+voltage
+with the plot of signals used for systet
+modeling. #s evidence that you have avoided saturation:
+Use several sets of data and different systetn setups, eg  different controller gains.
+Mcrease lfle
+probability that YOUI
+pirumeler eSTales Arc
+iccurlc
+Nonall;
+OMCC
+the systet identification
+cumpeleu:
+diflerent method
+employed -
+the systet identilication #gain. We call this process
+Vdnuonalne
+alduc Twd
+procedures
+YUWI
+esus
+Sunilat
+cundeni
+the correctness
+of the
+pramelets you identified
+We are allowing
+skip the validation step.
+providing instead the nommal
+paramelet values
+this system:
+abs(k;) = 1.9 rad/(Vs)
+0.025s
+M4o 26
+Fall 2023
+FucU
+voltzg
+aloug
+
+Page 5
+========================================
+WATERLOO
+To help prevent
+LAML
+eperiiental #ppuralus
+WIeIA
+the beam
+necumecleu
+the molor
+Lab
+erilical that the HOIOI
+Kear angle satisfies
+06)-
+at all tites_ To help ensure this, prefilter
+() using
+Liurinn
+cnot
+Figure
+In Lab 2i(4) we will design
+canroleL
+achieve A1
+DVershdd
+higher than 5% : when
+this   controller
+operting
+the   condition
+Trad
+Oref ,sar (t)
+0.Trad_
+will
+CMSMIC
+0() <
+Nole: For situlations_ use Matlab 202 [4, the satie aS the -
+ersion available On the
+lab cotpulets_
+In later labs.
+you will berequired
+submit your Simulink diagram
+for testing evaluation:
+this Ieason
+Ileed
+consistent Matlab platfon
+Use Situlink
+situlate the systet
+Figure 7(b)
+verify that the saturalor
+Works 43
+expecled: Inelude
+vour report the Simulink diugram used and
+sitnulated plot showing
+the effect of the saturator.
+Warniug: Do not attach the ball and
+Uem
+the motor
+this
+Include the smuralor
+your forula node
+petfor
+experitent
+show that the
+saluruldr
+functioning as desired. Inelude the plot in your Lab
+repL:
+Draw
+block diagrat for the inner-loop
+showing the experimental signals; the variable
+nates Used in the fortula node; and their units. Be sure
+inelude nonlinear effects_ such
+ofisets and saturation; as Well aS sensor
+scaling: Correct signs should also
+be showi:
+Indicate which blocks; specilically, are
+patt of Ile apparalus_
+Distinguish (colur
+line
+type) between analog
+digital signals-
+Note: When choosing the platform for creating this diagram keep
+Iind that
+Lab
+the scope
+of the project expards, YDu add
+this diagtat, which will be
+prt of your deliverables again in Lab
+(h) Include the code fiOm your Fonula Node.
+In addition
+the Geuenl Repol Guidelines; attempt
+best
+you Can; t0 fit your Lab
+repor
+within
+pages fTOm the ffont [ge
+the end:
+OI J
+Fall 2023
+7(1
+puiut
+
