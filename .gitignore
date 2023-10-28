@@ -1,3 +1,4 @@
 
 .env
 venv/Lib/
+.DS_Store
