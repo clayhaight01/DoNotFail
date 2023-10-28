@@ -17,7 +17,6 @@ def image_to_clipboard(image_path):
     # Copy the image to the clipboard
     img.convert('RGB').toclipboard()
 
-
 def tab(tabCnt=1):
     pyautogui.keyDown('command')
     for i in range(tabCnt):
