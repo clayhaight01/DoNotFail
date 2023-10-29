@@ -15,8 +15,10 @@ def main():
     pdf2png("marked.pdf", "marked_png")
     # OCR code, replaced by GPT4-V:
     # marked_text = batch_OCR("marked")
+    
+    # GPT4V Hack:
     # marked_text = GPT4V("marked_png", os_string="WIN")
-    with open("marked_text.txt", "r", encoding="utf-8") as infile:
+    with open("marked_text.txt", "r", encoding="utf-8") as infile: # Hit GPT4 max messages, so used cached version
         marked_text = infile.read()
 
     content = f"Assignment:\n{assignment_text}\n\nSubmitted:\n{submitted_text}\n\Received:\n{marked_text}\n\n"
@@ -46,7 +48,8 @@ def main():
         reply_email_prompt = f"{HUMAN_PROMPT} You are a student who has recently been marked very harshly and unfairly. You have been going back and forth with the TA and the message history is below:\n {msg_history} \nDraft reply that outlines your concerns and asks for consideration to get some marks back. You have made a plan and outlined areas where you can get marks back:\n {plan} \nFocus on explaining why you think you were marked unfairly, and why you DESERVE to get marks back. Give logical answers to how you think you answered the questions to the best of your abilities. Do not admit that you did something wrong, but saying that you could've done better is alright. ONLY write the reply, do not respond with anything else. Keep it professional but word it assertively, and make sure to address every point the TA makes. {AI_PROMPT}"
 
         draft = anthropic.completions.create(model="claude-2", max_tokens_to_sample=30000, prompt=reply_email_prompt).completion
-        print("original")
+        print("original draft" + '= ' * 40)
+        print(draft)
         feedback_prompt = f"{HUMAN_PROMPT}You review emails and make them more assertive, providing tips to professionals on how to succeed in their career. You are helping a student email their professor to get some marks back, and they have been marked very unfairly. Review their email and tell them how to improve it. Here is the email: {draft} {AI_PROMPT}"
 
         feedback = anthropic.completions.create(model="claude-2", max_tokens_to_sample=30000, prompt=feedback_prompt).completion
