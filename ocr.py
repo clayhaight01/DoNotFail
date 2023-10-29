@@ -19,7 +19,7 @@ EASY_OCR_PARAMS = {
 }
 reader = easyocr.Reader(['en'], gpu=False, detect_network="craft", recog_network='standard')
 
-def OCR(input_folder):
+def batch_OCR(input_folder):
     with open("marked_text.txt", "w", encoding="utf-8") as outfile:
         files = sorted([f for f in os.listdir(input_folder) if f.endswith(".png")])
 
