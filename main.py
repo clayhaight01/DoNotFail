@@ -15,7 +15,7 @@ def main():
     pdf2png("marked.pdf", "marked_png")
     # OCR code, replaced by GPT4-V:
     # marked_text = batch_OCR("marked")
-    
+
     # GPT4V Hack:
     # marked_text = GPT4V("marked_png", os_string="WIN")
     with open("marked_text.txt", "r", encoding="utf-8") as infile: # Hit GPT4 max messages, so used cached version
@@ -38,7 +38,17 @@ def main():
     initial_email_prompt = f"{HUMAN_PROMPT} You are a student who has recently been marked very harshly and unfairly. Draft an email that outlines your concerns and asks for consideration to get some marks back. Do not ask to resubmit unless it is your only option. You have made a plan and outlined areas where you can get marks back:\n {plan} \nFocus on explaining why you think you were marked unfairly, and why you DESERVE to get marks back. Give logical answers to how you think you answered the questions to the best of your abilities. Do not admit that you did something wrong, but saying that you could've done better is alright. ONLY write the email, do not respond with anything else. Keep it professional but word it assertively. {AI_PROMPT}"
 
     print("\n\n Email Thread" + "=" * 40)
-    initial_email = "From chaight@uwaterloo.ca: " + anthropic.completions.create(model="claude-2", max_tokens_to_sample=30000, prompt=initial_email_prompt).completion
+    initial_email_draft = "From chaight@uwaterloo.ca: " + anthropic.completions.create(model="claude-2", max_tokens_to_sample=30000, prompt=initial_email_prompt).completion
+    print("original draft" + '= ' * 40)
+    print(initial_email_draft)
+    feedback_prompt = f"{HUMAN_PROMPT}You review emails and make them more assertive, providing tips to professionals on how to succeed in their career. You are helping a student email their professor to get some marks back, and they have been marked very unfairly. Review their email and tell them how to improve it. Here is the email: {initial_email_draft} {AI_PROMPT}"
+    feedback = anthropic.completions.create(model="claude-2", max_tokens_to_sample=30000, prompt=feedback_prompt).completion
+    print("Feedback: " + '= ' * 40)
+    print(feedback)
+
+    fix_email_prompt = f"{HUMAN_PROMPT} This email could use some feedback, here are some suggestions: \n {feedback} \n please implement them and respond with ONLY a new draft for an email.{AI_PROMPT}"
+    initial_email = "\n\n From chaight@uwaterloo.ca: " + anthropic.completions.create(model="claude-2", max_tokens_to_sample=30000, prompt=fix_email_prompt).completion
+    print("New Email: " + '= ' * 40)
     print(initial_email)
     msg_history = initial_email
 
@@ -50,12 +60,14 @@ def main():
         draft = anthropic.completions.create(model="claude-2", max_tokens_to_sample=30000, prompt=reply_email_prompt).completion
         print("original draft" + '= ' * 40)
         print(draft)
+
         feedback_prompt = f"{HUMAN_PROMPT}You review emails and make them more assertive, providing tips to professionals on how to succeed in their career. You are helping a student email their professor to get some marks back, and they have been marked very unfairly. Review their email and tell them how to improve it. Here is the email: {draft} {AI_PROMPT}"
 
         feedback = anthropic.completions.create(model="claude-2", max_tokens_to_sample=30000, prompt=feedback_prompt).completion
         print("Feedback: " + '= ' * 40)
         print(feedback)
-        reply = "\n\n From chaight@uwaterloo.ca: " + anthropic.completions.create(model="claude-2", max_tokens_to_sample=30000, prompt=draft + feedback).completion
+        fix_email_prompt = f"{HUMAN_PROMPT} This email could use some feedback, here are some suggestions: \n {feedback} \n please implement them and respond with ONLY a new draft for an email.{AI_PROMPT}"
+        reply = "\n\n From chaight@uwaterloo.ca: " + anthropic.completions.create(model="claude-2", max_tokens_to_sample=30000, prompt=fix_email_prompt).completion
         print("New Reply: " + '= ' * 40)
         print(reply)
 

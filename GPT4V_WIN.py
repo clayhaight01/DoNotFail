@@ -95,7 +95,7 @@ def GPT4V(filepath, os_string="WIN"):
             match = re.search(r'ChatGPT(.*?)Regenerate', text, re.DOTALL).group(1)
         elif os_string == "WIN":
             start_index = text.find("ChatGPT") + len("ChatGPT")
-            end_index = text.find("Regenerate")
+            end_index = text.find("END_OF_PROMPT")
             match = text[start_index:end_index].strip()
             print(match)
 
